@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    static func instance(storyboardName: StoryboardName? = nil) -> Self {
+    static func instance(storyboardName: String? = nil) -> Self {
         return genericInstance(storyboardName: storyboardName)
     }
     

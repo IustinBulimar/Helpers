@@ -19,8 +19,8 @@ extension UIFont {
     }
     
     
-    static func registerFont(fileName: String) {
-        guard let url = Bundle.current.url(forResource: fileName, withExtension: nil),
+    static func registerFont(fileName: String, bundle: Bundle = .main) {
+        guard let url = bundle.url(forResource: fileName, withExtension: nil),
             CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil) else {
                 fatalError("Failed to register font: \(fileName)")
         }
